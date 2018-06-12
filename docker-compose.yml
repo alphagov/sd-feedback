@@ -1,0 +1,27 @@
+version: "3"
+
+services:
+  db:
+    image: mongo:latest
+    volumes:
+      - sdsurveydb:/data/db
+    networks:
+      - sdsurvey
+  
+  server:
+    build: ./server
+    networks:
+      - sdsurvey
+    volumes:
+      - ./server:/usr/src/app
+      - /usr/src/app/node_modules/
+    ports:
+      - 5060:5060
+    depends_on:
+      - db
+    command: ["nodemon", "index.js"]
+  
+networks:
+  sdsurvey:
+volumes:
+  sdsurveydb:

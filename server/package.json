@@ -1,0 +1,29 @@
+{
+  "name": "sdsurvey",
+  "version": "0.0.1",
+  "description": "Service Desk Survey",
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "adrian.durran@digital.cabinet-office.gov.uk",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^3.5.1",
+    "morgan": "^1.9.0",
+    "nodemon": "^1.17.3"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "gridfs-stream": "^1.1.1",
+    "helmet": "^3.12.0",
+    "mongoose": "^5.0.15",
+    "multer": "^1.3.0",
+    "multer-gridfs-storage": "^3.0.1",
+    "react-redux": "^5.0.7",
+    "socket.io": "^2.1.1"
+  }
+}
