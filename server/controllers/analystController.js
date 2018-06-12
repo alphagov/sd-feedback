@@ -35,7 +35,7 @@ module.exports = {
   },
 
   addAnalyst: async (req, res) => {
-    console.log(req.body.analystName, req.file);
+    // console.log(req.body.analystName, req.file);
     const analystP = {
       firstName: req.body.analystName,
       analystImage: req.file.id

@@ -4,14 +4,14 @@ services:
   db:
     image: mongo:latest
     volumes:
-      - sdsurveydb:/data/db
+      - sdfeedbackdb:/data/db
     networks:
-      - sdsurvey
+      - sdfeedback
   
   server:
     build: ./server
     networks:
-      - sdsurvey
+      - sdfeedback
     volumes:
       - ./server:/usr/src/app
       - /usr/src/app/node_modules/
@@ -22,6 +22,6 @@ services:
     command: ["nodemon", "index.js"]
   
 networks:
-  sdsurvey:
+  sdfeedback:
 volumes:
-  sdsurveydb:
+  sdfeedbackdb:
