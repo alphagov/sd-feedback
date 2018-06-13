@@ -32,5 +32,7 @@
   },
   "devDependencies": {
     "redux-devtools-extension": "^2.13.2"
-  }
+  },
+  "author": "Adrian Durran (Government Digital Service)",
+  "license": "MIT"
 }
